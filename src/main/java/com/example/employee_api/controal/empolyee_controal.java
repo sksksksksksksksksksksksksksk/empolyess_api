@@ -4,10 +4,7 @@ import com.example.employee_api.model.empolyee_DB;
 import com.example.employee_api.services.empolyee_services;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +23,15 @@ public class empolyee_controal {
     {
         empolyee_services.inserting_value(empolyee_DB);
         return "successfully inserting..";
+
+    }
+    @PostMapping("/send")
+    public String parameter_passing(@RequestParam("id") int id,
+                                    @RequestParam("name") String name,
+                                    @RequestParam("pos") String pos)
+    {
+        empolyee_services.parmeter(id,name,pos);
+        return "upload data....";
 
     }
 }

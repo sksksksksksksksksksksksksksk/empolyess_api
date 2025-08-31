@@ -6,6 +6,8 @@ import lombok.*;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class empolyee_DB{
     @Id
     private int id;

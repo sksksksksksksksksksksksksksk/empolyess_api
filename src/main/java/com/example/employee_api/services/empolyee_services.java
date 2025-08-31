@@ -18,4 +18,9 @@ public class empolyee_services {
     public List<empolyee_DB> display_empolyess(empolyee_DB empolyeeDb) {
        return emplyess_repo.findAll();
     }
+
+    public void parmeter(int id, String name, String pos) {
+        empolyee_DB empl=new empolyee_DB(id,name,pos);
+        emplyess_repo.save(empl);
+    }
 }
