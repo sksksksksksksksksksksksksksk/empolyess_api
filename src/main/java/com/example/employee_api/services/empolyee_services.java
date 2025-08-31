@@ -5,6 +5,7 @@ import com.example.employee_api.reposity.emplyess_repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -23,4 +24,9 @@ public class empolyee_services {
         empolyee_DB empl=new empolyee_DB(id,name,pos);
         emplyess_repo.save(empl);
     }
+
+    public List<empolyee_DB> findid(int id) {
+        return emplyess_repo.findAllById(Collections.singleton(id));
+    }
 }
+

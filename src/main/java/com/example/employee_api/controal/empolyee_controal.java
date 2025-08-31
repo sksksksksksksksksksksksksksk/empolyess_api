@@ -34,4 +34,11 @@ public class empolyee_controal {
         return "upload data....";
 
     }
+    @GetMapping ("/parr")
+    public List<empolyee_DB> parameter_2(@RequestParam("id") int id)
+    {
+       return empolyee_services.findid(id);
+
+
+    }
 }

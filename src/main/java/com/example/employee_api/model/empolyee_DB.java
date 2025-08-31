@@ -13,4 +13,7 @@ public class empolyee_DB{
     private int id;
     private String name;
     private String pos;
+    public empolyee_DB(int id) {
+        this.id = id;
+    }
 }
